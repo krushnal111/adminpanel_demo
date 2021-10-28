@@ -1,0 +1,133 @@
+@import "breadcrumb";
+
+body.dashboard-main {
+  background: var(--body-bg) !important;
+}
+
+.main-content-area {
+  margin-left: $nav-sidebar-width;
+  // transition: all 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+  @include media(down, $breakpoint-xxl) {
+    margin-left: 0;
+  }
+
+  header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    z-index: 1030;
+    position: fixed;
+    width: 100%;
+
+    &.sticky {
+      background: var(--bg-white);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      //  body{
+      //     &.vertical{
+      //         box-shadow: none;
+      //         border-bottom: 1px solid var(--sidebar-border);
+      //     }
+      // }
+    }
+
+    .top-menu-bar {
+      .navbar {
+        height: 70px;
+        background: white;
+
+        &.fixed-top {
+          margin-left: 260px;
+        }
+      }
+    }
+  }
+
+  .main-content-block {
+    padding: 70px 30px 0;
+    min-height: calc(100vh - 52px);
+    overflow: hidden;
+    // body{
+    //     &.vertical &{
+    //         @media screen and (max-width: 1346px){
+    //             padding:100px 30px 0;
+    //         }
+    //     }
+    // }
+    @include media(down, $breakpoint-md) {
+      padding: 70px 20px 0;
+    }
+  }
+
+  body {
+    &.vertical {
+      .main-content-block {
+        @media screen and (max-width: 1346px) {
+          padding: 100px 30px 0;
+        }
+      }
+    }
+  }
+
+  // vertical menu
+  body {
+    &.vertical {
+      margin-left: 0;
+    }
+  }
+}
+
+body {
+  &.vertical {
+    header {
+      &.sticky {
+        box-shadow: none;
+        border-bottom: 1px solid var(--sidebar-border);
+      }
+    }
+    .main-content-area {
+      margin-left: 0;
+      .main-content-block {
+        padding: 140px 30px 0;
+      }
+    }
+  }
+}
+
+.form {
+  &.repeater-default {
+    &:first-child {
+      .field-form {
+        .and-or-data {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.and-or-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .btn {
+    padding: 5px 10px;
+    border-radius: 20px;
+    min-width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    height: 1.5rem;
+    &.condition-text {
+      background: $success;
+      color: $white;
+      border-color: $success;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

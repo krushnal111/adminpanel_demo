@@ -1,0 +1,204 @@
+.card {
+  &.profile-card {
+    box-shadow: -8px 12px 18px 0 rgba(25, 42, 70, 0.13);
+    transition: all 0.3s ease-in-out;
+    padding: 1.5rem;
+    .title {
+      color: var(--text-color);
+      font-weight: $font-regular;
+    }
+    .user-details {
+      label {
+        margin-bottom: 0;
+        width: size(132);
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+        color: var(--text-color);
+        text-transform: uppercase;
+        font-family: $font-family-base;
+        font-weight: $font-semibold;
+        margin-right: 0.5rem;
+        &.xl-label {
+          width: size(150);
+          margin-right: 0.5rem;
+        }
+      }
+      .input-span {
+        display: inline-block;
+        width: calc(100% - 126px);
+        color: var(--gray-dark);
+        font-size: 1rem;
+        line-height: 1.3rem;
+        font-family: $font-family-base;
+        font-weight: $font-regular;
+        word-break: break-word;
+      }
+    }
+    .user-image {
+      background: $white;
+      border: 8px solid rgba(90, 141, 238, 0.3);
+      box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.02);
+      width: size(107);
+      height: size(107);
+      border-radius: 50%;
+      overflow: hidden;
+      @include media(down, $breakpoint-md) {
+        text-align: center;
+        margin: 0 auto;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+      .img-upload {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        color: $white;
+        bottom: 0;
+        right: 0;
+        font-size: 1.5rem;
+        cursor: pointer;
+        #attach-file {
+          display: none;
+        }
+        #file {
+          display: none;
+        }
+        .add-user {
+          display: none !important;
+        }
+      }
+    }
+    .edit-image {
+      position: relative;
+      width: size(107);
+      height: size(107);
+      @include media(down, $breakpoint-md) {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+    .react-datepicker-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+// .cropper-wrap-box, .cropper-canvas, .cropper-drag-box, .cropper-crop-box, .cropper-modal{
+//     width: 100% !important;
+//     height: 100% !important;
+//     transform: none !important;
+//     top: 0;
+//     left: 0;
+// }
+
+.bootstrap-select {
+  & > .btn-light {
+    background: var(--input-bg);
+    border: none;
+    // border:1px solid $input-border-color;
+    &:active {
+      background: var(--input-bg);
+    }
+    &:hover {
+      border-color: transparent;
+    }
+    &.dropdown-toggle {
+      .filter-option-inner-inner {
+        color: var(--input-color);
+      }
+    }
+  }
+
+  .selectpicker {
+    display: block !important;
+  }
+
+  &.show {
+    & > .btn-light {
+      background: var(--input-bg) !important;
+      &.dropdown-toggle {
+        background: var(--input-bg) !important;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .btn {
+    &:focus {
+      outline: none !important;
+    }
+    &:active {
+      background: var(--input-bg) !important;
+    }
+  }
+  .dropdown {
+    .btn {
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+  .dropdown-menu {
+    top: 0 !important;
+    &::before {
+      border: 0;
+      background: transparent;
+    }
+    &::after {
+      border: 0;
+      background: transparent;
+    }
+    li {
+      .dropdown-item {
+        color: $gray-dark;
+
+        &.active {
+          span {
+            color: var(--input-color);
+          }
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      &:hover {
+        .dropdown-item {
+          background: var(--light) !important;
+          span {
+            color: var(--input-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-group-prepend {
+  .bootstrap-select {
+    & > .btn-light {
+      background: var(--input-bg);
+      border-right: 1px solid var(--input-border) !important;
+      border: none;
+    }
+  }
+}
+
+.ReactCrop {
+  overflow: hidden;
+  max-height: 520px;
+}
+.ReactCrop__image {
+  max-height: 500px;
+}

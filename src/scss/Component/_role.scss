@@ -1,0 +1,44 @@
+.role-table {
+  thead {
+    tr {
+      border-bottom: 2px solid var(--main-border);
+      th {
+        padding: 2rem 0 0.8rem 2.5rem;
+        font-family: $font-family-base;
+        font-size: 0.75rem;
+        color: var(--dark);
+        letter-spacing: 0;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        .custom-checkbox {
+          label {
+            margin: 0;
+            font-size: 0.75rem !important;
+            color: var(--dark) !important;
+            letter-spacing: 0;
+            line-height: 1.25rem !important;
+            text-transform: uppercase !important;
+            font-family: $font-family-base;
+            font-weight: $font-medium !important;
+            padding-left: size(29);
+          }
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--main-border);
+      td {
+        padding: 1.25rem 0 1.25rem 2.5rem;
+        font-family: $font-heading;
+        font-size: 1rem;
+        color: var(--text-color);
+        letter-spacing: 0;
+        line-height: 1.5rem;
+        text-transform: capitalize;
+        font-weight: $font-regular;
+      }
+    }
+  }
+}

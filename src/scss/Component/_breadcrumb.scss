@@ -1,0 +1,64 @@
+// breadcrumb scss
+.breadcrumb{
+    background: none;
+    padding:10px 0 23px;
+    margin-bottom: 0;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+        }
+    }
+
+    
+    .content-header-title{
+        font-size: 1.2rem;
+        color: var(--text-color);
+        border-right: 1px solid #828D99;
+        padding-right: 1rem !important;
+        margin-right: 1rem;
+        font-weight: $font-regular;
+        @include media(down, $breakpoint-sm){
+            font-size: .85rem;
+            margin-right: .5rem;
+            padding-right: .5rem !important;
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            border-right: 0;
+        }
+    }
+
+    .breadcrumb-item  {
+        font-size:1rem;
+        color: var(--gray-dark-shade1);
+        @include media(down, $breakpoint-sm){
+            font-size: .75rem;
+        }
+        &.active{
+            color: var(--primary);
+            text-transform: capitalize;
+        }
+        
+        + &:before{
+            content: '\ea4a';
+            font-family: boxicons, sans-serif;
+            position: relative;
+            top: 2px;
+        }
+        
+        .bx{
+            font-size:1rem;
+            @include media(down, $breakpoint-sm){
+                font-size: .75rem;
+            }
+        }
+        a{
+            display: inline-block;
+            vertical-align: top;
+            // font-size: 0;
+        }
+    }
+}

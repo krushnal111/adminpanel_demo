@@ -1,0 +1,342 @@
+.card {
+  &.import-card {
+    .import-file {
+      .import-head {
+        @include media(down, $breakpoint-md) {
+          display: block !important;
+        }
+        h6 {
+          font-size: 1rem;
+          color: var(--text-color);
+          font-family: $font-heading;
+          font-weight: $font-regular;
+        }
+        span {
+          font-size: 1rem;
+          color: $gray-dark-shade1;
+          font-family: $font-family-base;
+          font-weight: $font-regular;
+        }
+        .btn {
+          @include media(down, $breakpoint-md) {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+      .asign {
+        max-width: 207px;
+        width: 100%;
+        @include media(down, $breakpoint-md) {
+          margin-top: 0.5rem;
+          .bootstrap-select {
+            & > .btn {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.import-csv {
+    background: var(--light-shade);
+    border-radius: 0.25rem;
+    border-color: var(--light-shade);
+    padding: 0;
+    border-bottom: 1px solid var(--man-border);
+    .card-header {
+      background: var(--light-shade);
+      padding: 1.7rem 1.5rem;
+      border-bottom: 0;
+      @include media(down, $breakpoint-md) {
+        padding: 1rem;
+      }
+      .import-title {
+        width: calc(100% - 350px);
+        @include media(down, $breakpoint-md) {
+          width: 100%;
+        }
+        h6 {
+          font-family: $font-family-base;
+          font-size: 1rem;
+          color: var(--dark);
+          letter-spacing: 0;
+          line-height: 1.5rem;
+        }
+        .import-icon {
+          width: 1.8rem;
+          position: relative;
+          cursor: pointer;
+          .import-file {
+            opacity: 0;
+            width: 1.8rem;
+          }
+          .import-file-label {
+            position: absolute;
+            top: size(-7);
+            left: 0;
+          }
+        }
+      }
+      .progress {
+        width: size(350);
+        height: 0.5rem;
+        @include media(down, $breakpoint-md) {
+          width: 100%;
+          margin-top: 0.75rem;
+        }
+      }
+    }
+    .add-text {
+      h5 {
+        a {
+          color: $success;
+          padding: 0 20px 0 10px;
+          display: inline-block;
+          &:hover {
+            color: $success !important;
+          }
+        }
+      }
+    }
+    .card-body {
+      h5 {
+        color: var(--text-color);
+        font-weight: $font-regular;
+      }
+      .custom-radio {
+        label {
+          color: $gray-dark;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+.field-form {
+  &:first-child {
+    .field {
+      .form-group {
+        label {
+          display: block !important;
+        }
+      }
+    }
+  }
+  .field {
+    .form-group {
+      label {
+        display: none !important;
+      }
+    }
+  }
+  .field {
+    display: flex;
+    align-items: center;
+    @include media(down, $breakpoint-md) {
+      display: block;
+    }
+
+    .form-group {
+      label {
+        color: $gray-dark;
+      }
+    }
+    .existing-field {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      @include media(down, $breakpoint-md) {
+        display: block;
+        width: 100%;
+      }
+      .form-group {
+        width: calc(100% - 56px);
+        @include media(down, $breakpoint-md) {
+          width: 100%;
+        }
+      }
+      .durable {
+        padding: 0 20px;
+        width: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dark);
+        @include media(down, $breakpoint-md) {
+          width: 100%;
+          margin: 0.75rem 0 !important;
+        }
+      }
+    }
+
+    .csv-field {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 50%);
+      @include media(down, $breakpoint-md) {
+        width: 100%;
+      }
+      .form-group {
+        width: calc(100% - 56px);
+      }
+      .remove {
+        a {
+          padding: 0 20px;
+          width: 3.5rem;
+          color: $danger;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            color: $danger !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropzone {
+  min-height: size(120);
+  border: 1px dashed var(--border-color);
+  background: var(--card-bg);
+  .dz-message {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: $gray-light;
+    top: 66%;
+    &::before {
+      content: "\eb8a";
+      font-size: 1rem;
+      color: var(--text-color);
+      top: size(-20);
+    }
+  }
+}
+
+.main-content-area {
+  .table {
+    &.common-datatable {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      thead {
+        tr {
+          th {
+            padding: 1rem;
+            font-family: $font-heading;
+            color: var(--text-color);
+            font-weight: $font-medium;
+            &:first-child {
+              padding-left: 30px;
+            }
+            &:last-child {
+              width: 150px;
+              padding-right: 30px;
+            }
+            &.checkbox-table {
+              width: 36px;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 0.5rem 1rem;
+            font-family: $font-size-base;
+            color: var(--gray-dark);
+            font-weight: $font-regular;
+            &:first-child {
+              padding-left: 30px;
+            }
+            &:last-child {
+              width: 150px;
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+      &.role-listing {
+        tbody {
+          tr {
+            td {
+              padding: 0.5rem 1rem;
+              &:first-child {
+                padding-left: 30px;
+              }
+              &:last-child {
+                padding-right: 30px;
+              }
+            }
+          }
+        }
+      }
+      &.mb-0 {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+.main-content-area {
+  .dataTables_wrapper {
+    .table.dataTable {
+      &.common-datatable {
+        background: var(--bg-white);
+        thead {
+          tr {
+            th {
+              padding: 1rem;
+              font-family: $font-heading;
+              color: var(--text-color);
+              font-weight: $font-medium;
+              &:first-child {
+                padding-left: 30px;
+              }
+              &:last-child {
+                width: 150px;
+                padding-right: 30px;
+              }
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              padding: 0.5rem 1rem;
+              font-family: $font-size-base;
+              color: var(--gray-dark);
+              font-weight: $font-regular;
+              &:first-child {
+                padding-left: 30px;
+              }
+              &:last-child {
+                width: 150px;
+                padding-right: 30px;
+              }
+            }
+          }
+        }
+        &.role-listing {
+          tbody {
+            tr {
+              td {
+                padding: 0.5rem 1rem;
+                &:first-child {
+                  padding-left: 30px;
+                }
+                &:last-child {
+                  padding-right: 30px;
+                }
+              }
+            }
+          }
+        }
+        &.mb-0 {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}

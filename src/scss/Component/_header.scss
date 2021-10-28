@@ -1,0 +1,61 @@
+header {
+  box-shadow: $box-shadow;
+  .verticle-btn {
+    @include media(down, $breakpoint-xl) {
+      display: none !important;
+    }
+  }
+}
+
+// .nav-custom{
+//     width: 223px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between !important;
+//     .nav-item{
+//         &:last-child{
+//             position: relative;
+//             z-index:1032;
+
+//             font-size: 1.5rem;
+//             margin-top: 13px;
+//             visibility: hidden;
+//             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+//             transform: translateX(0);
+//             span{
+//                 color: #bdd1f8;;
+//             }
+//         }
+//     }
+// }
+
+// body{
+//     &.sidebar-open{
+//         header{
+//            z-index: 1032 !important;
+//            .nav-custom{
+//                .nav-item{
+//                    &:first-child{
+//                        visibility: hidden;
+//                    }
+//                    &:last-child{
+//                        visibility: visible;
+//                    }
+//                }
+//            }
+//         //    &.sticky{
+//         //        .nav-custom
+//         //    }
+//         }
+//     }
+// }
+
+body {
+  &.vertical {
+    .mobile-menu {
+      @media screen and (min-width: 1440px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,322 @@
+// Bootstrap overdies varibles File
+@import "Helpers/variable";
+// Default Bootstrap scss File no need to change
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/react-perfect-scrollbar/dist/css/styles.css";
+@import "../../node_modules/boxicons/css/boxicons.min.css";
+
+// Custom Files
+@import "Helpers/import.scss";
+@import "Component/_all.scss";
+// For root used theme changes
+:root {
+  --primary: #5a8dee;
+  --secondary: #475f7b;
+  --success: #39da8a;
+  --info: #00cfdd;
+  --warning: #fdac41;
+  --danger: #ff5b5c;
+  --white: #fff;
+  --black: #000;
+  --gray: #b3c0ce;
+  --gray-dark: #727e8c;
+  --gray-dark-shade1: #596778;
+  --light: #f2f4f4;
+  --light-shade: #f2f4f4;
+  --light-shade-1: #fafbfb;
+  --dark: #304156;
+  --purple: #b87ee5;
+  --border-color: #c7cfd6;
+  --main-border: #e1e1e1;
+  --sidebar-bg: #1a233a;
+  --sidebar-active: #272e48;
+  --body-bg: #f2f4f4;
+  --bg-white: #fff;
+  --text-color: #475f7b;
+  --btn-light-primary: #e2ecff;
+  --card-bg: #fff;
+  --login-card-bg: #f2f4f4;
+  --input-bg: #ffffff;
+  --input-color: #475f7b;
+  --input-border: #c7cfd6;
+  --input-bg-focus: #ffffff;
+  --input-color-focus: #8a99b5;
+  --input-border-focus: #5a8dee;
+  --input-bg-placeholder: #ffffff;
+  --header-bg: #ffffff;
+  --switch-bg: #e7edf3;
+  --switch-border: #e7edf3;
+  --sidebar-border: #1a233a;
+  --dt-text-color: #727e8c;
+  --dt-icon-color: #b3c0ce;
+  --dt-border-color: #c7cfd6;
+  --dt-pager-color: #3f3356;
+  --alert-bg-success: #d2ffe8;
+  --alert-color-success: #39da8a;
+  --alert-bg-warning: #ffeed9;
+  --alert-color-warning: #fdac41;
+  --alert-bg-danger: #ffdede;
+  --alert-color-danger: #ff5b5c;
+  --soon-bg: #1a233a;
+}
+
+body {
+  &.dark {
+    // --white: #343a40;
+    // --black: #343a40;
+    // --primary: #9A97F3;
+    // --secondary: #818cab;
+    --gray-dark: #8a99b5;
+    --dark: #8a99b5;
+    --bg-white: #272e48;
+    --text-color: #bdd1f8;
+    --light: #272e48;
+    --sidebar-bg: #1a233a;
+    --light-shade: #1a233a;
+    --light-shade-1: #1a233a;
+    --card-bg: #1a233a;
+    --login-card-bg: #1a233a;
+    --body-bg: #1a233a;
+    --switch-bg: #1a233a;
+    --sidebar-border: #464d5c;
+    // --sidebar-active:#1a233a;
+    --input-bg: #1a233a;
+    --input-color: #8a99b5;
+    --input-border: #464d5c;
+    --switch-border: #464d5c;
+    --main-border: #464d5c;
+    --border-color: #464d5c;
+    --input-bg-focus: #1a233a;
+    --input-color-focus: #8a99b5;
+    --input-border-focus: #5a8dee;
+    --input-bg-placeholder: #1a233a;
+    --header-bg: #272e48;
+    --btn-light-primary: #1a233a;
+    --dt-text-color: #bdd1f8;
+    --dt-icon-color: #b3c0ce;
+    --dt-border-color: #46494b;
+    --dt-pager-color: #3f3356;
+    --soon-bg: #272e48;
+    --gray-dark-shade1: #bdd1f8;
+  }
+}
+
+body {
+  background: var(--body-bg);
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  // color: $body-color;
+  color: var(--black);
+  font-weight: $font-regular;
+  
+  // background: url(#{$assetPath}/confirm-cancel.jpg);
+}
+
+// Begin: Links
+//  a {
+//     text-decoration:$link-decoration;
+//     color: $link-color;
+//     cursor:pointer;
+//     outline: 0;
+//     &:hover, &:focus{
+//         //text-decoration:$link-hover-decoration;
+//         outline:0;
+//         color:$link-hover-color;
+//     }
+// }
+// Begin: helper Classe
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+img {
+  max-width: 100%;
+}
+
+.theme-switch-wrapper {
+  .switch-checkbox .slider {
+    background-color: lighten($primary, 10);
+  }
+}
+
+// Layout
+body,
+html {
+  height: 100%;
+}
+
+// Custom Scroll with CSS only Supported Browser Chrome, Safari and Firefox
+* {
+  scrollbar-color: rgba($black, 0.3) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($black, 0.3);
+}
+
+/* Hide Spinner in Input Number - Firefox*/
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bx {
+  &.danger {
+    color: $danger;
+  }
+  &.danger {
+    color: $danger;
+  }
+}
+
+.theme-setting-link {
+  .bx-cog {
+    font-size: 26px;
+    pointer-events: none;
+  }
+}
+
+.theme-setting-block {
+  display: block;
+  position: fixed;
+  right: 0;
+  background: var(--bg-white);
+  padding: 10px;
+  top: 73px;
+  width: auto;
+  border-left: 0px solid var(--secondary);
+  min-width: 60px;
+  min-width: 120px;
+  min-height: 63px;
+  transform: translateX(100%);
+  -webkit-transition: 300ms cubic-bezier(0.25, 0.8, 0.25, 1) all;
+  transition: 300ms cubic-bezier(0.25, 0.8, 0.25, 1) all;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15),
+    0px 0rem 1rem 1px rgba(0, 0, 0, 0.15);
+  border-bottom-left-radius: 5px;
+  // z-index: 9999;
+  @include media(down, $breakpoint-sm) {
+    z-index: 99;
+  }
+  &.open {
+    transform: translateX(0);
+  }
+  .icon {
+    color: var(--text-color);
+  }
+  .theme-setting-link {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    background: var(--bg-white);
+    color: var(--text-color);
+    border-radius: 10% 0 0 10%;
+    transform: translateX(-99%);
+    width: 62px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: -7px 0rem 1rem rgba(0, 0, 0, 0.15);
+    &:hover {
+      color: var(--text-color);
+    }
+    @media only screen and (min-width: 567px) and (max-width: 896px) and (orientation: landscape) {
+      width: 30px;
+      height: 30px;
+    }
+    @include media(down, $breakpoint-sm) {
+      width: 30px;
+      height: 30px;
+    }
+    .bx-cog {
+      font-size: 26px;
+      pointer-events: none;
+      @media only screen and (min-width: 567px) and (max-width: 896px) and (orientation: landscape) {
+        font-size: 20px;
+      }
+      @include media(down, $breakpoint-sm) {
+        font-size: 20px;
+      }
+    }
+  }
+  .custom-switch {
+    padding: 10px;
+    padding-left: 0;
+    .custom-control-input {
+      position: initial;
+    }
+    .custom-control-label {
+      color: #5a8dee;
+    }
+  }
+  .verticle-btn {
+    @include media(down, $breakpoint-xxl) {
+      display: none !important;
+    }
+  }
+}
+
+:not(.theme-setting-block-nav-link) .theme-setting-block {
+  border-radius: 0;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  &.card-link {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: $primary;
+    font-weight: $font-regular;
+    &:hover {
+      text-decoration: none !important;
+      color: darken($primary, 10) !important;
+    }
+  }
+  small {
+    color: $primary;
+  }
+  &:hover {
+    text-decoration: none !important;
+    color: darken($primary, 10) !important;
+  }
+}
+
+.back-link {
+  font-size: 22px;
+  letter-spacing: 1.83px;
+}

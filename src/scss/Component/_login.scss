@@ -1,0 +1,194 @@
+body {
+  &.dark {
+    .login-wrapper {
+      background: url(./login-bg-dark.jpg) no-repeat center center !important;
+      background-size: cover !important;
+    }
+    .setting-dropdown {
+      .dark-icon {
+        svg {
+          fill: #e8c55c;
+        }
+      }
+    }
+  }
+}
+.login-wrapper {
+  overflow: overlay;
+  overflow-x: hidden;
+  .card {
+    .card-body {
+      padding: 1.7rem;
+      padding-top: 0 !important;
+      @media only screen and (min-width: 567px) and (max-width: 896px) and (orientation: landscape) {
+        padding: 0;
+      }
+      @include media(down, $breakpoint-sm) {
+        padding: 0;
+      }
+    }
+  }
+  .icon-arrow {
+    position: absolute;
+    right: size(15);
+    top: size(11);
+  }
+  .common-small-text {
+    color: $gray-light;
+  }
+  .login-body {
+    .login-container {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      justify-content: center;
+      @media only screen and (min-width: 567px) and (max-width: 896px) and (orientation: landscape) {
+        margin: 20px !important;
+      }
+      .card {
+        border: none;
+        .card-header {
+          border-bottom: none;
+          background: var(--bg-white);
+          @include media(down, $breakpoint-sm) {
+            padding: 0.5rem 0;
+          }
+          .card-title {
+            h4 {
+              // color: $dark;
+              font-family: $font-heading;
+              color: var(--text-color);
+              font-weight: $font-regular;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.card {
+  background: var(--bg-white);
+  &.bg-login-card {
+    box-shadow: -8px 20px 25px 0 rgba(25, 42, 70, 0.3);
+    background: var(--login-card-bg);
+    padding: 0;
+    .disable-rounded-right {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .back {
+      position: absolute;
+      left: size(45);
+      top: size(30);
+      color: var(--text-color);
+      font-size: $font-size-base;
+      @include media(down, $breakpoint-md) {
+        top: size(20);
+        left: size(30);
+      }
+      .bx {
+        color: $primary;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+.divider {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 1rem 0;
+  .divider-text {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 1rem;
+    background-color: var(--bg-white);
+    color: var(--text-color) !important;
+    &::before {
+      right: 100%;
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 9999px;
+      border-top: 1px solid $main-border;
+    }
+    &::after {
+      left: 100%;
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 9999px;
+      border-top: 1px solid $main-border;
+    }
+  }
+}
+
+.btn-social {
+  .btn-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    line-height: 2.3rem;
+    font-size: 1.3rem;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+.hide-password {
+  display: none;
+}
+/* otp input */
+.digit-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .form-control {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    line-height: 2.75rem;
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: $font-family-base;
+    margin: 0 2px;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--input-bg);
+    color: var(--input-color);
+    border: 1px solid var(--input-border);
+    @media only screen and (max-width: 350px) {
+      width: 2rem !important;
+      height: 2rem !important;
+    }
+  }
+}
+
+.country-mobile-number {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  .country-code-mobile {
+    width: 5rem;
+
+    .ng-select {
+      .ng-select-container {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height: 38px;
+        border-right: 0 !important;
+      }
+    }
+  }
+  .phone-number-input {
+    width: calc(100% - 85px);
+    .form-control {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

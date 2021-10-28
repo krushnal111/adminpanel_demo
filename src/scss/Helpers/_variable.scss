@@ -1,0 +1,185 @@
+/* =========== IMAGE PATH VARIABLE ============= */
+$assetPath: "/assets/images/";
+/* Usage of bacground image */
+//background: url(#{$assetPath}/background.jpg) repeat-x fixed 0 0;
+
+// Color system
+$white: #ffffff;
+$black: #000000;
+$primary: #5a8dee;
+$secondary: #475f7b;
+$success: #39da8a;
+$info: #00cfdd;
+$warning: #fdac41;
+$danger: #ff5b5c;
+$light: #f2f4f4;
+$dark: #304156;
+$gray: #b3c0ce;
+$gray-dark: #727e8c;
+$gray-dark-shade1: #596778;
+$gray-light: #828d99;
+$border-color: #c7cfd6;
+$light-shade: #fafbfb;
+$border-shade1: #979797;
+$purple: #b87ee5;
+$main-border: #e1e1e1;
+$google: #dd4b39;
+$facebook: #3b5998;
+$switch-bg: #e7edf3;
+$secondary-text: #475f7b;
+$btn-light: #e4e6eb;
+
+// Body
+// Settings for the `<body>` element.
+$body-bg: $white;
+$body-color: $black;
+
+// Links
+// Style anchor elements.
+$link-color: theme-color("primary");
+$link-decoration: none;
+$link-hover-color: darken($primary, 50%);
+$link-hover-decoration: underline;
+
+// Font
+$font-family-base: "IBM Plex Sans", sans-serif;
+$font-heading: "Rubik", sans-serif;
+$font-boxicon: "boxicons" !important;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-custom: 16;
+$font-size-lg: $font-size-base * 1.25; //20px
+$font-size-sm: $font-size-base * 0.875; //14px
+$font-lighter: lighter;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-bolder: bolder;
+$line-height-base: 1.25;
+
+// Style p element.
+$paragraph-margin-bottom: 1rem;
+
+// Media BreakPoint
+$breakpoint-xxl: 1440px;
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+$breakpoint-xs: 414px;
+
+// Components
+// Define common padding and border radius sizes and more.
+$border-width: 1px;
+
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+
+$rounded-pill: 50rem;
+
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
+$box-shadow-0: none;
+
+$caret-width: 0.3em;
+$caret-vertical-align: $caret-width * 0.85;
+$caret-spacing: $caret-width * 0.85;
+
+$transition-base: all 0.2s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+
+// Buttons
+$btn-padding-y: 0.25rem;
+$btn-padding-x: 0.625rem;
+$btn-font-family: $font-family-base;
+$btn-font-size: $font-size-base;
+$btn-line-height: $font-size-base + 0.75rem;
+$btn-white-space: null; // Set to `nowrap` to prevent text wrapping
+
+$btn-padding-y-sm: 0.25rem;
+$btn-padding-x-sm: 0.625rem;
+$btn-font-size-sm: 0.75rem;
+$btn-line-height-sm: $font-size-base + 0.25rem;
+
+$btn-padding-y-lg: 0.75rem;
+$btn-padding-x-lg: 0.625rem;
+$btn-font-size-lg: 1.125rem;
+$btn-line-height-lg: $font-size-base + 1.37rem;
+
+// Forms
+$label-font-size: 0.75rem;
+$label-margin-bottom: 0.5rem;
+$input-padding-y: 0.5rem;
+$input-padding-x: 0.75rem;
+$input-font-family: $font-family-base;
+$input-font-size: $font-size-base;
+$input-font-weight: $font-regular;
+
+$input-padding-y-sm: 0.5rem;
+$input-padding-x-sm: 0.5rem;
+$input-font-size-sm: $font-size-sm;
+$input-border-color: $border-color;
+
+$input-padding-y-lg: 1.25rem;
+$input-padding-x-lg: 1.25rem;
+$input-font-size-lg: $font-size-lg;
+
+//Gradiant Style
+$fallback: $primary;
+$from: $primary;
+$to: darken($primary, 10);
+$direction: 225deg;
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes: true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: true !default;
+$enable-validation-icons: true !default;
+$enable-deprecation-messages: true !default;
+
+// Spacing
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 2,
+    ),
+    6: (
+      $spacer * 2.5,
+    ),
+    7: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
+);
+
+// Sidebar width-navbar-margin-spacing
+$nav-sidebar-width: 260px;

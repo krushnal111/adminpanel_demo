@@ -1,0 +1,9 @@
+// ASSETS IMAGE PATH FUNCTION
+@function get-path-to-assets($assetPath) {
+  @return $assetPath;
+}
+
+// REM CALCULATION FUNCTION
+@function size($target, $context: $font-custom) {
+  @return ($target / $context) * 1rem;
+}

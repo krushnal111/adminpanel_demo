@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>india-flag-square-icon-32</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24" rx="2"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-Avatars-/-Country-/-India">
+            <g id="india-flag-square-icon-32">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+                <image mask="url(#mask-2)" x="0" y="0" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGOfPtRkwAAAaJJREFUSA1j/D/TmIGWgImWhoPMHrWAYAiPBtHABxELw++vBF1BiQIWBnV/YvWzMjGwMYMU//rL8PsfkboY////T6TSh89+X7v2muE/g5aWiLw0G5G6iLIA6IYJE07fvvNeV0cEaO6VK2+UlAQLC02YmBgJWkOUBRMnnvn27Xdyst779z+BlgkJccybd4mdnbmw0JSgBSwEVTx8+OnmzXcNDTZ79z68dOkVUL2urmhSkl5T09GHDz/Ky/PjN4GwBVeuvAYG+osXXy9efLVv3wOgD4DRpqMjoqUlfPnya4IWEFVUMEKDGpQggAgGgMELY+KmCftAR0d069a7oaHq+vpiDAwgq4BBJCHBc+3aGy8vJdwmQ2WIiuT+/tM/f/4Fhvvbt9+B+oSFORYsuMLMzFhcbEYdC/79YwDa8eD+B2DQA/0ATKbAoC8qMqVaMoU4882zv1euAjPaf20dUVEpwmEL0cWYvDGGoDchClhZmdjARcWvX39/E19UsDURaT6Zylh42NjJ1EqcNqLyAXFGYVc1agH2cEESHQ0ipMDAzqR5EAEA30mVWnZ04vUAAAAASUVORK5CYII="></image>
+            </g>
+        </g>
+    </g>
+</svg>

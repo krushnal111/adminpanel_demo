@@ -1,0 +1,16 @@
+footer {
+  padding: 1rem 1.3rem;
+  flex-wrap: wrap;
+  .footer-text {
+    flex-wrap: wrap;
+    span {
+      font-size: 1rem;
+      color: $gray-dark-shade1;
+      letter-spacing: 0;
+      line-height: 1.3rem;
+      @include media(down, $breakpoint-sm) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

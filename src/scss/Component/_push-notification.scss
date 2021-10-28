@@ -1,0 +1,242 @@
+.card {
+  &.push-notify-card {
+    padding: 1.8rem;
+    @include media(down, $breakpoint-md) {
+      padding: 1rem;
+    }
+    h5 {
+      color: var(--dark);
+      font-family: $font-heading;
+      font-weight: $font-regular;
+      line-height: 1.6rem;
+    }
+    .push-blocks {
+      padding-left: 1.8rem;
+      padding-bottom: 5rem;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: size(5);
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: var(--input-border);
+      }
+      &::after {
+        position: absolute;
+        left: size(-6);
+        top: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $primary;
+        border-radius: 4px;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &.first {
+        &::after {
+          content: "1";
+        }
+      }
+      &.second {
+        &::after {
+          content: "2";
+        }
+      }
+      &.third {
+        &::after {
+          content: "3";
+        }
+      }
+      &.fourth {
+        &::after {
+          content: "4";
+        }
+      }
+      .target-form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .target-details {
+        width: calc(100% - 70px);
+      }
+      .add-row {
+        width: 70px;
+        padding-left: 1.25rem;
+      }
+      .notification-pannel {
+        padding: 1rem;
+        background: rgba(90, 141, 238, 0.2);
+        display: flex;
+        border-radius: 0.25rem;
+        p {
+          font-family: $font-heading;
+          color: $primary;
+          font-weight: $font-regular;
+        }
+      }
+      .or-text {
+        position: relative;
+        height: 30px;
+        width: 100%;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: size(10);
+          height: 1px;
+          width: 100%;
+          background: var(--input-border);
+        }
+        &::after {
+          content: "Or";
+          position: absolute;
+          left: size(10);
+          top: 0;
+          height: 1.5rem;
+          width: 2.8rem;
+          color: var(--text-color);
+          border: 1px solid var(--input-border);
+          background: var(--bg-white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0.25rem;
+        }
+      }
+      .custom-radio {
+        label {
+          color: $gray-dark;
+        }
+      }
+      .select-schedule {
+        background: var(--login-card-bg);
+        padding: 1.5rem;
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media(down, $breakpoint-md) {
+          padding: 1rem;
+        }
+        @include media(down, $breakpoint-sm) {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+.setting-btn {
+  width: 43px;
+  height: 38px;
+  color: var(--text-color);
+  background: var(--light);
+  border-radius: 0.25rem;
+  border: 1px solid var(--input-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media(down, $breakpoint-xs) {
+    margin-top: 0.25rem;
+  }
+}
+
+.picker__list {
+  background: var(--login-card-bg);
+  .picker__list-item {
+    color: var(--text-color);
+    &:hover {
+      background: var(--light);
+    }
+    &:focus {
+      background: var(--light);
+    }
+  }
+}
+
+.push-notification-listing {
+  .status-dropdown {
+    > span {
+      &:before {
+        content: "\ea24";
+        opacity: 0;
+        right: 0.5em;
+        font-family: boxicons, sans-serif !important;
+      }
+      &:after {
+        content: "\e9ac";
+        opacity: 0.5;
+        font-family: boxicons, sans-serif !important;
+      }
+    }
+    .dropdown-menu {
+      padding: 12px 12px;
+      min-width: 140px;
+      .custom-checkbox {
+        > label {
+          margin: 8px 0 !important;
+        }
+        div {
+          .bx {
+            font-size: 1rem !important;
+            margin-right: 0.5rem;
+          }
+        }
+        span {
+          display: inline-block;
+          letter-spacing: 0;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .status {
+    > span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+  }
+}
+.notification-user-title {
+  font-size: 1rem;
+}
+.notification-text {
+  font-size: 0.75rem;
+}
+.notification-user-email {
+  font-size: 0.75rem;
+}
+.notification-time {
+  font-size: 0.75rem;
+}
+.table .bxl-apple {
+  font-size: 16px;
+  color: #b3c0ce !important;
+}
+.table .bxl-android {
+  font-size: 16px;
+  color: #21e081 !important;
+}
+.table .bx-globe {
+  font-size: 16px;
+  color: #475f7b !important;
+}
+.android-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.push-notification-detail-listing {
+  .platform {
+    text-align: center;
+  }
+  .status {
+    text-align: center;
+  }
+}

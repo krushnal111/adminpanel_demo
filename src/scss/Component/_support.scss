@@ -1,0 +1,213 @@
+.support-sidebar {
+  width: 262px;
+  height: calc(100vh - 60px);
+  background: var(--light);
+  border: 1px solid var(--input-border);
+  border-radius: 4px 0 0 4px;
+  padding: 0.6rem;
+  overflow-y: auto;
+  display: inline-block;
+  position: absolute;
+  top: 127px;
+  left: 290px;
+  transition: all 0.3s ease;
+  z-index: 1;
+  // body{
+  //     &.vertical{
+  //         z-index: 0;
+  //         left: 30px;
+  //         top: auto;
+  //     }
+  // }
+  @include media(down, $breakpoint-xl) {
+    left: 30px;
+    border-right: 1px solid var(--input-border);
+  }
+  @include media(down, $breakpoint-lg) {
+    left: -290px;
+    position: fixed;
+    z-index: 99;
+  }
+  .heading-title {
+    .select-all {
+      width: 72px;
+    }
+    .bootstrap-select {
+      & > .btn-light {
+        min-width: 70px;
+      }
+    }
+  }
+  h6 {
+    color: var(--dark);
+  }
+}
+.support-content-block {
+  margin-left: 262px;
+  @include media(down, $breakpoint-lg) {
+    margin-left: 0;
+  }
+}
+
+.open-ticket {
+  .support-sidebar {
+    left: 0;
+  }
+}
+.ticket-btn {
+  border: 1px solid var(--input-border);
+  border-radius: 0.25rem;
+  color: var(--gray);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ticket-box {
+  background: var(--bg-white);
+  border: 1px solid var(--input-border);
+  border-radius: 0.25rem;
+  span {
+    font-size: 1rem;
+    font-family: $font-heading;
+    font-weight: $font-medium;
+    color: var(--gray-dark);
+    line-height: 1.25rem;
+  }
+  .ticket-header {
+    padding: 10px;
+    border-bottom: 1px solid var(--input-border);
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+  .ticket-body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .text {
+      font-size: 0.75rem;
+    }
+    .image {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 0.5rem;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.status-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  &.success {
+    background: $success;
+  }
+  &.danger {
+    background: $danger;
+  }
+  &.warning {
+    background: $warning;
+  }
+}
+
+.collapse-support {
+  .card {
+    background: var(--light-shade-1);
+    border-radius: 0.25rem;
+    border: 1px solid var(--input-border);
+    padding: 0;
+    .card-header {
+      background: var(--light-shade-1);
+      border: none;
+      padding: 0;
+      border-radius: 0.25rem;
+      .collapse-title {
+        padding: 1.8rem 1.8rem;
+        @include media(down, $breakpoint-md) {
+          padding: 1rem;
+        }
+        .icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: var(--text-color);
+          font-size: 0.75rem;
+          font-family: $font-heading;
+          font-weight: $font-regular;
+          color: var(--white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        h5 {
+          font-size: 1rem;
+          color: var(--gray-dark);
+          font-family: $font-family-base;
+          font-weight: $font-regular;
+        }
+        .base-title {
+          font-size: 0.75rem;
+          color: var(--gray);
+          font-family: $font-family-base;
+          font-weight: $font-regular;
+        }
+        .time {
+          font-size: 0.75rem;
+          color: var(--gray);
+          font-family: $font-family-base;
+          font-weight: $font-regular;
+        }
+      }
+    }
+    .card-body {
+      border-top: 1px solid var(--input-border);
+      .ticket-content {
+        p {
+          font-size: 1rem;
+          font-family: $font-family-base;
+          font-weight: $font-regular;
+          color: var(--gray-dark);
+        }
+      }
+    }
+    .card-footer {
+      padding: 0;
+      background: transparent;
+      border-top: none;
+      .form-control {
+        position: relative;
+        padding-bottom: 2rem;
+      }
+      .send-message {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        .attach {
+          color: var(--dark);
+        }
+      }
+    }
+  }
+  .card[aria-expanded="true"] {
+    border-color: var(--light-shade-1);
+  }
+}
+
+body {
+  &.vertical {
+    .support-sidebar {
+      z-index: 0;
+      left: 30px;
+      top: auto;
+    }
+  }
+}

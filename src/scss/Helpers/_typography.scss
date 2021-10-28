@@ -1,0 +1,67 @@
+/*Headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: $font-medium;
+  font-family: $font-heading;
+}
+h1,
+.h1 {
+  font-size: $font-size-base * 2.5;
+}
+h2,
+.h2 {
+  font-size: $font-size-base * 2;
+}
+h3,
+.h3 {
+  font-size: $font-size-base * 1.75;
+}
+h4,
+.h4 {
+  font-size: $font-size-base * 1.37;
+}
+h5,
+.h5 {
+  font-size: $font-size-base * 1.125;
+}
+h6,
+.h6 {
+  font-size: $font-size-base;
+}
+
+small {
+  font-size: 0.75rem;
+  font-weight: $font-regular;
+  font-family: $font-family-base;
+  line-height: 1rem;
+}
+.common-small-text {
+  font-size: 0.75rem;
+  font-weight: $font-regular;
+  font-family: $font-family-base;
+  line-height: 1rem;
+  color: $gray-light;
+}
+
+h5,
+.h5 {
+  @include media(down, $breakpoint-md) {
+    font-size: 1rem;
+  }
+}
+h6,
+.h6 {
+  @include media(down, $breakpoint-md) {
+    font-size: 0.75rem;
+  }
+}
