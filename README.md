@@ -283,3 +283,4 @@ We used below directory structure in our univarsal admin panel.
 * **INIC** - *Initial work* - [IndiaNIC Infotech Limited](https://www.indianic.com/)
 
 See also the list of [contributors](http://git.indianic.com/IIL0/I2020-5865/reactjs_admin-v16-13-1/project_members) who participated in this project.
+# adminpanel_demo
